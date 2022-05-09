@@ -8,22 +8,42 @@
     "**/i3/config": "i3"
     // ...
   },
-  "breadcrumbs.enabled": false,
   "php.validate.executablePath": "/usr/bin/php",
   // Editor
   "editor.fontSize": 16,
   "editor.lineHeight": 28,
   "editor.fontFamily": "Fira Code, Consolas, Courier New, monospace",
   "editor.fontLigatures": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "editor.formatOnSave": true,
   "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
   // "editor.multiCursorModifier": "ctrlCmd",
   "editor.minimap.enabled": false,
-  "editor.lineNumbers": "off",
-
-  // Window
-  "window.zoomLevel": 1,
+  // "editor.lineNumbers": "off",
+  "vim.useCtrlKeys": false,
+  /**
+   * Prettier
+   **/
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[react]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "prettier.requireConfig": true,
+  "prettier.useEditorConfig": false,
   "window.titleBarStyle": "native",
   "window.customMenuBarAltFocus": false,
   "window.menuBarVisibility": "hidden",
@@ -79,5 +99,35 @@
     "**/package-lock.json": true,
     "storage": true,
     ".phpunit.result.cache": true
-  }
+  },
+  //Termial
+  "terminal.integrated.copyOnSelection": true,
+
+  "customizeUI.stylesheet": {
+    ".editor .title": "background: transparent !important;",
+    // ".editor .title .label-container": "visibility: hidden;",
+    // Hide top-right buttons
+    ".editor .title .actions-container .action-item a": "visibility: hidden;",
+    // Show top-right "settings goto icon"
+    ".editor .title .actions-container .action-item a[title=\"Open Settings (UI)\"]": "visibility: initial;",
+    ".editor .title .actions-container .action-item a[title=\"Open Settings (JSON)\"]": "visibility: initial;",
+    // Make it the "right-most" icon.
+    ".editor .title .actions-container": "flex-direction: row-reverse;",
+    // Only show the scrollbar on hover.
+    // ".editor .scrollbar .slider": "visibility: hidden",
+    // ".editor .scrollbar:hover .slider": "visibility: initial",
+    // Change cursor color.
+    ".monaco-editor .cursor": "background: linear-gradient(to bottom, #7f00ff, #e100ff) !important; color: #292D3E !important"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDelete": false,
+  "tabnine.experimentalAutoImports": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 1,
+  "terminal.explorerKind": "external",
+  "terminal.external.linuxExec": "alacritty",
+  "terminal.integrated.persistentSessionScrollback": 1000,
+  "terminal.integrated.scrollback": 2000
 }

@@ -102,5 +102,15 @@
     "key": "ctrl+j",
     "command": "editor.action.joinLines",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "workbench.action.terminal.paste",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+shift+v",
+    "command": "-workbench.action.terminal.paste",
+    "when": "terminalFocus && terminalProcessSupported"
   }
 ]
